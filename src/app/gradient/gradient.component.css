@@ -1,0 +1,25 @@
+.jumbotron{
+  color:#fff;
+  height: 500px;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}
+.jumbotron-content{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.jumbotron-content input{
+  color:#fff;
+}

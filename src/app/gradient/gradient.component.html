@@ -1,32 +1,54 @@
-<div class="jumbotron text-center" [style.background-color]="this.color1">
-  <h1 class="display-4">CSS3 Gradient Generator </h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  {{color1}}
-  <div class="jumbotron-content">
+<div class="jumbotron text-center">
+  <div class="overlay"  [style.background-image]="'linear-gradient(' + 'to right' +',' + this.color1 + ',' + this.color2 + ')'">
 
+  </div>
+
+  <div class="jumbotron-content">
+      <h1 class="display-4 mt-4">CSS3 Gradient Generator </h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      {{color1}}
       <div class="container">
           <div class="row justify-content-md-center">
             <div class="col col-lg-2">
                 <div class="form-group">
-                  <input type="text" [(colorPicker)]="color1" [style.background]="color1" name="color1" class="form-control">
+                    <input type="text" class="form-control"  [(colorPicker)]="color1"
+                    [cpPresetColors]="['#7B1FA2', '#039BE5', '#FF5252', '#D32F2F', '#283593']"
+                    [cpPosition]="'left'"
+                    [style.background]="color1"
+                    [cpAlphaChannel]="'always'"
+                    [cpOutputFormat]="'hex'"
+                    [value]="color1">
                 </div>
             </div>
 
             <div class="col col-lg-2">
               <div class="form-group">
-                <input type="color" name="color2" class="form-control">
+                  <input type="text" class="form-control"  [(colorPicker)]="color2"
+                    [cpPresetColors]="['#7B1FA2', '#039BE5', '#FF5252', '#D32F2F', '#283593']"
+                    [cpPosition]="'right'"
+                    [style.background]="color2"
+                    [cpAlphaChannel]="'always'"
+                    [cpOutputFormat]="'hex'"
+                    [value]="color2">
               </div>
             </div>
           </div>
       </div>
 
-
-
-
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
   </div>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+
+</div>
+
+<div class="container">
+  <h3>You code Here</h3>
+
+    <pre>
+        background: linear-gradient(direction, {{this.color1}}, {{this.color2}});
+    </pre>
+
 </div>
