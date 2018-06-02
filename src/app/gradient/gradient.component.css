@@ -23,3 +23,12 @@
 .jumbotron-content input{
   color:#fff;
 }
+.jumbotron input[type='radio']{
+  opacity: 0;
+}
+
+.select-active{
+  color: white;
+  background: #3F51B5;
+  border-radius: 50%;
+}
