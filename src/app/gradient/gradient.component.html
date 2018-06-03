@@ -84,7 +84,14 @@
   <h3>You code Here</h3>
 
     <pre>
+        <code class="language-css" innerHTML="
         background: linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
+        background: -webkit-linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
+        background: -moz-linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
+        background: -o-linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
+
+        ">
+        </code>
     </pre>
 
 </div>
