@@ -4,3 +4,54 @@
   background-image: url('assets/jumbo-bg.jpg');
   background-size: cover;
 }
+
+.color-picker .selected-color{
+  top: 10px;
+  left: 7px;
+  width: 40px;
+  height: 40px;
+  border: 0px solid #a9a9a9;
+}
+.color-picker{
+  box-shadow: -3px 7px 19px 4px rgba(0, 0, 0, .3) !important;
+  border:1px !important;
+}
+.color-picker .preset-area .preset-color{
+  border: 0px !important;
+  border-radius: 15% !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 4px 4px 4px !important;
+}
+.color-picker .hue{
+  height: 13px;
+  margin-bottom: 10px;
+}
+.color-picker .alpha{
+  height: 13px;
+}
+.color-picker .cursor{
+  width: 13px;
+  height: 13px;
+  border: #3c3c3c96 solid 2px;
+}
+.color-picker .box .left{
+  padding: 12px 8px;
+}
+.color-picker .selected-color{
+  top: 12px;
+  left: 8px;
+  width: 41px;
+  height: 41px;
+   border: 0px;
+}
+.color-picker .type-policy{
+  top:210px;
+}
+.color-picker .hex-text .box{
+  padding: 3px 24px 0px 8px;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"],pre {
+  background: #272822 !important;
+}

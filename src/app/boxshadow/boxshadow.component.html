@@ -1,9 +1,58 @@
 <div class="jumbotron text-center">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+  <h1 class="display-4" [style.text-shadow]="this.horizontal +'px '+ this.vertical +'px '+ this.blur +'px'+ this.color">Box Shadow Generator</h1>
+
+  <div class="jumbotron-content">
+      <div class="row justify-content-md-center">
+          <div class="box" [style.box-shadow]="this.horizontal+'px '+ this.vertical+'px '+ this.blur +'px '+ this.spread +'px '+ this.color">
+            <h3>Box Shadow</h3>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="horizontal">Horizontal</label>
+                  <input type="number" class="form-control" [(ngModel)]="horizontal" id="horizontal">
+                  {{horizontal}}
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="vertical">Vertical</label>
+                  <input type="number" class="form-control" [(ngModel)]="vertical" id="vertical">
+                  {{vertical}}
+                </div>
+              </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="blur">Blur</label>
+                  <input type="number" class="form-control" [(ngModel)]="blur" id="blur">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="spread">spread</label>
+                  <input type="number" class="form-control" [(ngModel)]="spread" id="spread">
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <input type="text" class="form-control"  [(colorPicker)]="color"
+                  [cpPresetColors]="['#7B1FA2', '#039BE5', '#FF5252', '#D32F2F', '#283593']"
+                  [cpPosition]="'top'"
+                  [cpAlphaChannel]="'always'"
+                  [cpOutputFormat]="'hex'"
+                  [value]="color">
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+
+</div>
+
+<div class="container">
+  <h3>Your Generatred Code Here</h3>
+
+  <pre>
+    <code class="language-css" innerHTML="
+      box-shadow : {{this.horizontal}}px {{this.vertical}}px {{this.blur}}px {{this.spread}}px {{this.color}};
+    "></code>
+  </pre>
 </div>

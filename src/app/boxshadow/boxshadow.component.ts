@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoxshadowComponent implements OnInit {
 
+  horizontal = '5';
+  vertical = '5';
+  blur = '5';
+  spread = '5';
+  color = 'red';
+
   constructor() { }
 
   ngOnInit() {

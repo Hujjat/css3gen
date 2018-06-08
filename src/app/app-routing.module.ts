@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'box-shadow',
     component: BoxshadowComponent
+  },
+  { path: '',
+    redirectTo: '/gradient',
+    pathMatch: 'full'
   }
 ];
 
