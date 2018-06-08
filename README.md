@@ -2,6 +2,8 @@
 
 CSS3 Gradient and Boxshadow generator with Angular 6. If you want to get start learning how I build this, you can watch the full tutorial here (soon will be added )
 
+I know look for the demo right !!! Here is the [demo](https://hujjat.github.io/css3gen-demo)
+
 ## Installation guide
 * Clone the project or download
 * Run ` npm install `
