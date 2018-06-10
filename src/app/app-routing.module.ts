@@ -13,9 +13,10 @@ const routes: Routes = [
     component: BoxshadowComponent
   },
   { path: '',
-    redirectTo: '/gradient',
+    redirectTo: 'gradient',
     pathMatch: 'full'
-  }
+  },
+  { path: '**', component: GradientComponent }
 ];
 
 @NgModule({
